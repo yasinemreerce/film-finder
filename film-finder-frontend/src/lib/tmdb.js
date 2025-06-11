@@ -28,3 +28,20 @@ export async function getNewlyReleasedMovies() {
   const data = await res.json();
   return data.results;
 }
+
+const MAX_PAGES = 500;  // API limitine göre ayarla
+export async function getRandomMovie() {
+  const randomPage = Math.floor(Math.random() * MAX_PAGES) + 1;
+  const res = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=tr-TR&page=${randomPage}`);
+  
+  if (!res.ok) throw new Error("Rastgele film alınamadı");
+  
+  const data = await res.json();
+  
+  if (!data.results || data.results.length === 0) {
+    throw new Error("Film listesi boş");
+  }
+
+  const randomIndex = Math.floor(Math.random() * data.results.length);
+  return data.results[randomIndex];
+}
