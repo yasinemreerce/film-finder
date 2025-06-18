@@ -3,7 +3,7 @@ import { open } from "sqlite";
 
 export async function openDB() {
   return open({
-    filename: "./database/mydb.sqlite", // database dosya yolu
+    filename: `${process.cwd()}/database/mydb.sqlite`, // database dosya yolu
     driver: sqlite3.Database,
   });
 }
@@ -16,6 +16,7 @@ export async function initializeDB() {
     CREATE TABLE IF NOT EXISTS users (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       username TEXT UNIQUE,
+      email TEXT UNIQUE NOT NULL,
       password TEXT
     );
   `);
