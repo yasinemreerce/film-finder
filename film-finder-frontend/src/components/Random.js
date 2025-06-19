@@ -28,7 +28,7 @@ export default function Random() {
 
 
   return (
-    <div className="container">
+    <div className={styles["random-container"]}>
       <h2 className={`${styles["title"]} promt-bold`}>Rastgele Film</h2>
       <button onClick={fetchRandomMovie} className={`promt-regular ${styles["random-button"]}`}>Random</button>
 

@@ -5,7 +5,7 @@
         width: 100%;
         min-width: 100vh;
         margin: 0 auto;
-        border: 1px solid yellowgreen;
+        /* border: 1px solid yellowgreen; */
 }
 
 .film-list h2 {
@@ -13,7 +13,7 @@
         font-weight: bold;
         margin-bottom: 20px;
         color: #333;
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
 }
 
 .film-list-types {
@@ -25,7 +25,7 @@
         gap: 80px;
         max-width: 100%;
         background-color: #f0f0f0;
-        border: 1px solid pink;
+        /* border: 1px solid pink; */
         padding-left: 50px;
         padding-right: 50px;
         margin: 0 auto;
@@ -59,7 +59,7 @@
         padding-top: 10px;
         padding-bottom: 10px;
         font-size: 20px;
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
 }
 
 .film-list-types > div ul {
@@ -136,21 +136,21 @@
 .most-popular {
         font-weight: bold;
         color: #333;
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
 }
 
 .new {
         font-weight: bold;
         color: #333;
 
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
 }
 
 .ranking {
         font-weight: bold;
         color: #333;
 
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
 }
 
 .most-popular-movies {
@@ -160,7 +160,7 @@
         width: 100%;
         max-width: 300px; /* Büyük ekranda en fazla bu genişlikte olur */
         flex: 1 1 250px;
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
         padding: 14px;
 }
 
@@ -171,6 +171,6 @@
         width: 100%;
         max-width: 300px; /* Büyük ekranda en fazla bu genişlikte olur */
         flex: 1 1 250px;
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
         padding: 14px;
 }

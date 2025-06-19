@@ -85,7 +85,6 @@ export default function FilmList() {
                                 <div className={styles["film-list-types"]}>
                                         <div className={`promt-regular ${styles["most-popular"]}`}>
                                                 <h4>En Beğenilenler</h4>
-                                                <hr />
                                                 <div className={styles["most-popular-movies"]}>
                                                         <ul>
                                                                 {mostPopularMovies.map((movie) => (
@@ -104,7 +103,6 @@ export default function FilmList() {
                                         </div>
                                         <div className={`promt-regular ${styles["new"]}`}>
                                                 <h4>Yeni <br/> Çıkanlar</h4>
-                                                <hr />
                                                 <div className={styles["newly-released-movies"]}>
                                                         <ul>
                                                                 {NewlyReleasedMovies.map((movie) => (
@@ -128,7 +126,6 @@ export default function FilmList() {
                                         </div>
                                         <div className={`promt-regular ${styles["ranking"]}`}>
                                                 <h4>En Çok İzlenenler</h4>
-                                                <hr />
                                                 <div className={styles["most-watched-movies"]}>
                                                         <ul>
                                                                 {mostWatchedMovies.map((movie) => (
