@@ -49,33 +49,39 @@ export default function Login() {
   }
 
   return (
-    <div className={styles["container"]}>
-      <h1>Giriş Yap</h1>
+    <>
+      <div className={styles["login-container"]}>
+        <h1 className="promt-bold">Login</h1>
+        <div className={styles["container"]}>
 
-      <form onSubmit={handleLogin}>
-        <label>Email</label>
-        <input
-          type="email"
-          value={email}
-          placeholder="emre@example.com"
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+          <form onSubmit={handleLogin}>
+              <label className="promt-regular text">Email</label>
+              <br />
+              <input
+                type="email"
+                value={email}
+                placeholder="emre@example.com"
+                onChange={(e) => setEmail(e.target.value)}
+                required
+            />
+            <br />
+            <label className="promt-regular">Şifre</label>
+            <br />
+            <input
+                type="password"
+                value={password}
+                placeholder="******"
+                onChange={(e) => setPassword(e.target.value)}
+                required
+            />
+            <br />
+            <input type="submit" value="Giriş Yap" className="submit"/>
+          </form>
 
-        <label>Şifre</label>
-        <input
-          type="password"
-          value={password}
-          placeholder="******"
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-
-        <input type="submit" value="Giriş Yap" />
-      </form>
-
-      <p onClick={handleRegisterRedirect}>Hesabınız yoksa kayıt olun...</p>
-      {message && <p style={{ marginTop: "1rem", color: "#444" }}>{message}</p>}
-    </div>
+          <p onClick={handleRegisterRedirect}>Hesabınız yoksa kayıt...</p>
+            {message && <p style={{ marginTop: "1rem", color: "#444" }}>{message}</p>}
+        </div>
+      </div>
+    </>
   );
 }

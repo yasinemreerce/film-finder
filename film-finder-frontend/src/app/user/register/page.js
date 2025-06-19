@@ -5,6 +5,7 @@ import styles from "./../style.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation"; 
 
+
 export default function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -51,38 +52,40 @@ export default function Register() {
 
   return (
     <>
-      <h1>Register</h1>
+      <div className={styles["register-container"]}>
+        <h1 className="promt-bold">Register</h1>
 
-      <div className={styles["container"]}>
-        <form onSubmit={handleSubmit}>
-          <label>Name</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-
-          <label>Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-
-          <label>Password</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-
-          <input type="submit" value="Kayıt Ol" />
-        </form>
-        <p onClick={handleLoginRedirect}>Hesabınız var ise giriş yapın...</p>
-        {message && <p>{message}</p>}
+        <div className={styles["container"]}>
+          <form onSubmit={handleSubmit} className={styles["form"]}>
+            <label className="promt-regular">Name</label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+            <br />
+            <label className="promt-regular">Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <br />
+            <label className="promt-regular">Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <br />
+            <input type="submit" value="Kayıt Ol" />
+          </form>
+          <p onClick={handleLoginRedirect}>Hesabınız var ise giriş yapın...</p>
+          {message && <p>{message}</p>}
+        </div>
       </div>
     </>
   );
