@@ -33,6 +33,7 @@ export default function Login() {
         setTimeout(() => {
           router.push("/"); 
         }, 1500);
+        localStorage.setItem("user_id", data.user.id);
       } else {
         setMessage("❌ " + (data.error || "Giriş başarısız."));
       }
@@ -42,6 +43,10 @@ export default function Login() {
       setMessage("❌ Sunucu hatası.");
     }
   };
+
+  const handleRegisterRedirect = () => {
+    router.push("/user/register"); 
+  }
 
   return (
     <div className={styles["container"]}>
@@ -69,6 +74,7 @@ export default function Login() {
         <input type="submit" value="Giriş Yap" />
       </form>
 
+      <p onClick={handleRegisterRedirect}>Hesabınız yoksa kayıt olun...</p>
       {message && <p style={{ marginTop: "1rem", color: "#444" }}>{message}</p>}
     </div>
   );

@@ -45,6 +45,10 @@ export default function Register() {
     }
   };
 
+  const handleLoginRedirect = () => {
+    router.push("/user/login"); 
+  }
+
   return (
     <>
       <h1>Register</h1>
@@ -77,7 +81,7 @@ export default function Register() {
 
           <input type="submit" value="Kayıt Ol" />
         </form>
-
+        <p onClick={handleLoginRedirect}>Hesabınız var ise giriş yapın...</p>
         {message && <p>{message}</p>}
       </div>
     </>

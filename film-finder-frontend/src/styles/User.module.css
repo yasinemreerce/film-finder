@@ -1,7 +1,7 @@
 .container {
         display: flex;
         border: 1px solid purple;
-        width: 50px;
+        width: 100px;
         height: 50px;
         margin-bottom: 25px;
         margin-left: auto;
@@ -18,3 +18,22 @@
 .user-icon:hover {
         transform: scale(1.05);
 }      
+
+.logout-button {
+        border: 1px solid blue;
+        width: 200px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: blue;
+}
+
+.logout-button:hover {
+        background-color: blue;
+        color: white;
+        transition: all 0.3s ease-in-out;
+}
